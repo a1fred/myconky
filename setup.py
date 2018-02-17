@@ -5,6 +5,7 @@ requires = [
     'colorama==0.3.9',
     'psutil==5.4.3',
     'monotable==2.0.0',
+    'oscheck==0.2',
     'requests',
 ]
 
