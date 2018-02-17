@@ -3,7 +3,7 @@ from typing import Iterable, Tuple
 import psutil
 import requests
 
-from sysinfo_recepits.core.receipt import AbstractRepecit
+from myconky.core.receipt import AbstractRepecit
 
 
 class NetworkInterfacesRecepit(AbstractRepecit):

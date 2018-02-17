@@ -1,5 +1,5 @@
-import monotable.table
-from sysinfo_recepits.receipts import (
+from myconky.core.utils import table
+from myconky.receipts import (
     cpu,
     ram,
     disk_space,
@@ -27,5 +27,4 @@ def get_cells():
 
 
 def main():
-    print(monotable.table.table(cellgrid=get_cells()))
-
+    print(table(cellgrid=get_cells()))

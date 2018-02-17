@@ -3,8 +3,8 @@ from typing import Iterable, Tuple
 from platform import system
 import psutil
 
-from sysinfo_recepits.core.receipt import AbstractRepecit
-from sysinfo_recepits.core.utils import gauge, bytes_fmt
+from myconky.core.receipt import AbstractRepecit
+from myconky.core.utils import gauge, bytes_fmt
 
 
 class DiskSpaceRecepit(AbstractRepecit):

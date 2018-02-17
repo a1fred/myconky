@@ -2,3 +2,5 @@
 __pycache__
 dist
 .idea
+build
+myconky.egg-info
