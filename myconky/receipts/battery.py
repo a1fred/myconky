@@ -3,7 +3,7 @@ from typing import Iterable, Tuple
 import psutil
 
 from myconky.core.receipt import AbstractRepecit
-from myconky.core.utils import gauge, bytes_fmt
+from myconky.core.utils import gauge
 
 
 class BatteryRecepit(AbstractRepecit):
@@ -11,7 +11,7 @@ class BatteryRecepit(AbstractRepecit):
         battery = psutil.sensors_battery()
         label = "Battery"
         if battery.power_plugged:
-            label += " (c)"
+            label += "⚡"
         yield (
             label,
             gauge(battery.percent)

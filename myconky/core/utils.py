@@ -1,4 +1,5 @@
 from typing import Iterable
+from colorama import Back, Fore, Style
 
 from monotable.table import MonoTable
 
@@ -14,7 +15,9 @@ def gauge(percentile, width=20, filled_char='#', empty_char=' ', summary=None):
         summary = "%s%%" % str(int(percentile))
 
     return '[%s%s] %s' % (
-        filled, empty, summary
+        "%s%s%s%s" % (Back.BLACK, Fore.BLACK, filled, Style.RESET_ALL),
+        empty,
+        summary
     )
 
 
