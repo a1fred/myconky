@@ -15,7 +15,8 @@ class RamRecepit(AbstractRepecit):
         )
 
         mem = psutil.swap_memory()
-        yield (
-            "SWAP",
-            gauge((mem.used/mem.total) * 100, summary="%s/%s" % (bytes_fmt(mem.used), bytes_fmt(mem.total))),
-        )
+        if mem.total:
+            yield (
+                "SWAP",
+                gauge((mem.used/mem.total) * 100, summary="%s/%s" % (bytes_fmt(mem.used), bytes_fmt(mem.total))),
+            )
